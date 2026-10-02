@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyle Lin | Portfolio</title>
+  <meta name="description" content="Portfolio of Kyle Lin, Supply Chain Management student at Rutgers Business School.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2328;
+      --muted: #656d76;
+      --accent: #cc0033;
+      --card: #f6f8fa;
+      --border: #d0d7de;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --fg: #e6edf3;
+        --muted: #8d96a0;
+        --accent: #ff5c7a;
+        --card: #161b22;
+        --border: #30363d;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    header.nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      z-index: 10;
+    }
+    header.nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-weight: 700; color: var(--fg); }
+    nav a { margin-left: 18px; color: var(--muted); font-size: 0.95rem; }
+    nav a:hover { color: var(--fg); text-decoration: none; }
+
+    .hero { padding: 90px 0 50px; text-align: center; }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 8px; }
+    .hero .tagline { color: var(--accent); font-weight: 600; margin: 0 0 20px; }
+    .hero .statement {
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--fg);
+      margin: 4px;
+    }
+    .btn:hover { text-decoration: none; background: var(--card); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn.primary:hover { opacity: 0.9; background: var(--accent); }
+
+    section { padding: 44px 0; }
+    section h2 {
+      font-size: 1.6rem;
+      margin: 0 0 22px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .skill-group { margin-bottom: 22px; }
+    .skill-group h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 10px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+    .skills li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .tag { font-size: 0.8rem; color: var(--muted); margin-bottom: 4px; }
+    .card h3 { margin: 0 0 10px; }
+    .card p { margin: 0 0 16px; color: var(--muted); flex: 1; font-size: 0.97rem; }
+    .links a { margin-right: 14px; font-weight: 600; font-size: 0.95rem; }
+    .card .thumb { display: block; margin-bottom: 14px; }
+    .card .thumb img { width: 100%; height: 190px; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--border); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 30px;
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="#top">Kyle Lin</a>
+      <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+
+    <!-- PERSONAL STATEMENT -->
+    <div class="hero">
+      <h1>Kyle Lin</h1>
+      <p class="tagline">Supply Chain Management &middot; Rutgers Business School</p>
+      <p class="statement">
+        I'm a Supply Chain Management student at Rutgers Business School who combines hands-on procurement and inventory experience with data analysis and entrepreneurship to make operations more efficient.
+      </p>
+      <a class="btn primary" href="#projects">View My Projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/kyle-lin-36729134b" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <ul class="skills">
+          <li>Excel (XLOOKUP, PivotTables)</li>
+          <li>Oracle</li>
+          <li>Python (data cleaning, text analysis)</li>
+          <li>Google Sheets</li>
+          <li>Microsoft Office Suite</li>
+          <li>Canva</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Supply Chain &amp; Business</h3>
+        <ul class="skills">
+          <li>Procurement &amp; Strategic Sourcing</li>
+          <li>Inventory Management</li>
+          <li>Demand Planning</li>
+          <li>Project Management</li>
+          <li>Six Sigma Yellow Belt</li>
+          <li>Marketing &amp; Client Relations</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Leadership &amp; Certifications</h3>
+        <ul class="skills">
+          <li>Co-President, National Business Honor Society</li>
+          <li>Advanced Certification in Procurement (ACP)</li>
+          <li>Rutgers Excel Certification</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <div class="card">
+          <a class="thumb" href="pristine-motion-flyer.jpg" target="_blank" rel="noopener">
+            <img src="pristine-motion-flyer.jpg" alt="Pristine Motion mobile car detailing price list flyer">
+          </a>
+          <div class="tag">Business &middot; 2025 &ndash; Present</div>
+          <h3>Pristine Motion</h3>
+          <p>Co-founded a mobile car-detailing business serving 100+ clients and generating $5K+ in revenue. I led marketing, scheduling, and client relations, reaching 10K+ online engagements.</p>
+          <div class="links">
+            <a href="https://www.instagram.com/pristinemotion1/" target="_blank" rel="noopener">Instagram</a>
+            <a href="pristine-motion-flyer.jpg" target="_blank" rel="noopener">Full Flyer</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tag">Operations Strategy &middot; Amazon Externship</div>
+          <h3>FC Career Pathway Program</h3>
+          <p>Analyzed workforce feedback to find why fulfillment center associates leave, identifying the lack of visible career advancement as a key driver. Built a 5-slide pitch deck proposing a three-layer pathway program (visibility, progression, recognition) and a 90-day pilot with clear success metrics.</p>
+          <div class="links">
+            <a href="Amazon_Pitch_Deck_Kyle_Lin.pdf" target="_blank" rel="noopener">View Deck (PDF)</a>
+            <a href="Amazon_Pitch_Deck_Kyle_Lin.pptx" download>Download (PPTX)</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tag">Operations &middot; RWJ University Hospital</div>
+          <h3>Inventory &amp; Procurement Optimization</h3>
+          <p>Monitored par levels and reorder points to prevent stockouts, and worked with leadership to propose AI-driven procurement solutions to optimize reorder points and reduce overstock by 15%.</p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/kyle-lin-36729134b" target="_blank" rel="noopener">Learn more</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Interested in working together? Reach me at
+        <a href="mailto:yl2457@rutgers.edu">yl2457@rutgers.edu</a>
+        or connect on
+        <a href="https://www.linkedin.com/in/kyle-lin-36729134b" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; <span id="year"></span> Kyle Lin &middot; B.S. Supply Chain Management, Rutgers Business School
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
